@@ -4,7 +4,6 @@
 
 // Área de Structs Globais
 
-// Estrutura das peças de dominó
 struct Pecas {
     int id; // usado para fazer verificações de forma mais curta no código
     int left;
@@ -71,9 +70,8 @@ int main() {
 
     int jogadorCampeaoDa1rodada = 0;
     int rodada = -1;
-    
+
     while (jogadorCampeaoDa1rodada == 0) {
-        
         /* 
             criar método para
             (após definido o player q ira começar) 
@@ -114,9 +112,9 @@ int main() {
         */
 
         printf("Player %d e %d venceram essa rodada", jogadorCampeaoDa1rodada, jogadorCampeaoDa1rodada+2); // anotar pontuação depois
-
-    }
         
+    }
+
     return 0;
 }
 
@@ -321,17 +319,41 @@ int jogadaPlayer(int player) {
         }
     }
     printf("\n Pecas na mesa: \n");   
-         
-    printf("\nEscolha o Id da peca que deseja jogar: ");
     
+
+    printf("\nEscolha o Id da peca que deseja jogar: ");
+        
+    /*
+            Precisamos criar uma lista encadeada para armazenar as peças da mesa
+            criar a função de mostrar a mesa
+            criar a função de inserir na mesa com a validação de se a peça q quer ser jogada é igual a head ou a tail
+            se for igual, adiciona a mesa e caso necessario vire a peça antes: 
+            se caso for jogar na head, o right tem que ser o igual, se caso for jogar na tail o left tem que ser igual
+    
+    */
+
+
     int qtdpecas = 0;
     scanf("%d", &qtdpecas);
 
     int ganhar = 0;
     
-    if (qtdpecas == 1234){
+    if (qtdpecas == 0){
         ganhar = player;
     }
 
     return ganhar;
+}
+
+    struct Node* atual = lista->cabeca;
+    struct Node* proximo;
+
+    while (atual != NULL) {
+        proximo = atual->proximo;
+        free(atual);
+        atual = proximo;
+    }
+
+    lista->cabeca = NULL;
+    lista->cauda = NULL;
 }
