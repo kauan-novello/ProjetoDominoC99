@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -35,7 +34,7 @@ void inserirNaLista(struct Pecas **head, struct Pecas **tail,
 
 void freelist(struct Pecas **head);
 int jogadaPlayer(int player, struct Pecas **head, struct Pecas **tail);
-
+void mostraMesa(struct Pecas *head);
 int main() {
   struct Pecas *head = NULL;
   struct Pecas *tail = NULL;
@@ -377,6 +376,7 @@ void inserirNaLista(struct Pecas **head, struct Pecas **tail,
   }
 }
 
+
 void freelist(struct Pecas **head) {
   struct Pecas *atual = *head;
   struct Pecas *temp = NULL;
@@ -411,7 +411,7 @@ int jogadaPlayer(int player, struct Pecas **head, struct Pecas **tail) {
              p4.pecas[i].right);
     }
   }
-  printf("\n Pecas na mesa: \n");
+  
 
   printf("\nEscolha o Id da peca que deseja jogar: ");
 
@@ -419,7 +419,6 @@ int jogadaPlayer(int player, struct Pecas **head, struct Pecas **tail) {
   scanf("%d", &idAtual);
 
   inserirNaLista(head, tail, listaPecas, idAtual);
-
   int ganhar = 0;
 
   if (idAtual == 0) {
