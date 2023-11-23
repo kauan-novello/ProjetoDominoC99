@@ -107,8 +107,7 @@ int main() {
     // contar as peças do jogador que jogou a ultima peça
   
     }
-  printf("Player %d e %d venceram o jogo", jogadorCampeao,
-     jogadorCampeao + 2);
+  printf("Player %d venceu o jogo", jogadorCampeao);
   return 0;
 }
 
