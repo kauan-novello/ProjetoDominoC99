@@ -6,6 +6,10 @@ para compilar o arquivo C o comando é:
 
 <code> $ gcc domino.c -o domino </code>
 
+e em seguida
+
+<code> ./domino </code>
+
 <h2>Regras do Jogo</h2>
 O jogo inicia com o embaralhamento das peças, seguido pela distribuição para cada jogador. O jogador que tiver a peça de maior valor inicia a primeira rodada. As jogadas seguem uma ordem de turno, respeitando o sentido horário ou anti-horário, dependendo de quem começou.
 
