@@ -23,8 +23,8 @@ Cada jogador escolhe uma peça para jogar na mesa. A peça escolhida deve coinci
 
 <h2>Autores</h2>
 
-Kauan Novello - kvns@cesar.school
+Kauan Novello      -  kvns@cesar.school
 
-Bernardo Coutinho - @cesar.school
+Bernardo Coutinho  -  bcc2@cesar.school
 
-Antônio Cabral -  @cesar.school
+Antônio Cabral     -  apbc@cesar.school
