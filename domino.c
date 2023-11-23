@@ -6,7 +6,7 @@ struct Pecas {
   int id; // usado para fazer verificações de forma mais curta no código
   int left;
   int right;
-  struct Pecas *prox; // Add these pointers to your struct
+  struct Pecas *prox; 
   struct Pecas *ant;
 };
 struct Player {
@@ -126,9 +126,7 @@ void embaralharPecas() {
 
   for (int i = 0; i < tamanho - 1; i++) {
 
-    int j =
-        i + rand() % (tamanho -
-                      i); // faz com que o numero aleatório esteja entre 0 e 27
+    int j = i + rand() % (tamanho -i); // faz com que o numero aleatório esteja entre 0 e 27
     /*
         int j = i + rand() % (tamanho - i);
         Isso gera um número aleatório j tal que i <= j < tamanho.
@@ -307,8 +305,7 @@ int verificarQuemComeca() {
 
   return playerdavez;
 }
-void inserirNaLista(struct Pecas **head, struct Pecas **tail,
-                    struct Pecas listaPecas[], int id) {
+void inserirNaLista(struct Pecas **head, struct Pecas **tail, struct Pecas listaPecas[], int id) {
   struct Pecas *novoNo = (struct Pecas *)malloc(sizeof(struct Pecas));
   for (int i = 0; i < 28; i++) { // verifica qual é a peca a ser inserida
     if (listaPecas[i].id == id) {
@@ -325,10 +322,7 @@ void inserirNaLista(struct Pecas **head, struct Pecas **tail,
 
       } else {
         int unico = (*head == *tail);
-        if (listaPecas[i].left == (*head)->left ||
-            listaPecas[i].right ==
-                (*head)
-                    ->left) { // verifica caso a peça possa ser inserida no head
+        if (listaPecas[i].left == (*head)->left || listaPecas[i].right == (*head) ->left) { // verifica caso a peça possa ser inserida no head
           novoNo->id = listaPecas[i].id;
           if (listaPecas[i].right == (*head)->left) {
             novoNo->left = listaPecas[i].left;
@@ -349,10 +343,7 @@ void inserirNaLista(struct Pecas **head, struct Pecas **tail,
         }
         if (!unico) { /* faz as mudanças apenas uma vez, já que a head e tail
                          representam o mesmo no quando apenas 1 foi inserido*/
-          if (listaPecas[i].left == (*tail)->right ||
-              listaPecas[i].right ==
-                  (*tail)->right) { /* verifica caso a peça possa
-                                    ser inserida no tail*/
+          if (listaPecas[i].left == (*tail)->right || listaPecas[i].right == (*tail)->right) { /* verifica caso a peça possa ser inserida no tail*/
             novoNo->id = listaPecas[i].id;
             if (listaPecas[i].left == (*tail)->right) {
               novoNo->left = listaPecas[i].left;
