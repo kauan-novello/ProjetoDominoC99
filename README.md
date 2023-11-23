@@ -4,7 +4,7 @@ Projeto em C - Cadeira de Programação Imperativa - Cesar School
 Use um compilador C, como o GCC (GNU Compiler Collection), 
 para compilar o arquivo C o comando é:
 
-<code> $ gcc domino.c -o domino </code>
+<code> $ gcc -o domino main.c embaralha.c </code>
 
 e em seguida
 
