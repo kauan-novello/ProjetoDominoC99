@@ -23,7 +23,6 @@ Cada jogador escolhe uma peça para jogar na mesa. A peça escolhida deve coinci
 - Ordem dos Turnos
 - Lista encadeada para representar as peças na mesa
 - Verificações de validade nas jogadas
-- Contagem de pontos
 
 <h2>Autores</h2>
 
